@@ -11,6 +11,7 @@ abstract class ControlDeAsistenciaDatabase: RoomDatabase() {
      * Este es un método abstracto que retorna el DAO para la base de datos.
      */
     abstract fun getCatedraticosDao(): CatedraticosDAO
+    abstract fun getClasesDao(): ClasesDAO
 
     /**
      * Un patrón de diseño Singleton es utilizado para asegurarnos que

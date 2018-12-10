@@ -6,7 +6,7 @@ import android.arch.persistence.room.*
 interface CatedraticosDAO{
 
     /**
-     * Inserta una nueva tupla en la tabla Catedraticos, Clases y RegistroActividad.
+     * Inserta una nueva tupla en la tabla Catedraticos.
      * @param catedraticos la tupla a insertar en la tabla.
      */
     @Insert(onConflict = OnConflictStrategy.IGNORE)
@@ -14,7 +14,7 @@ interface CatedraticosDAO{
 
 
     /**
-     * Actualiza una tupla en la tabla Catedraticos, Clases y RegistroActividad.
+     * Actualiza una tupla en la tabla Catedraticos.
      * @param catedraticos  el valor de la tupla a actualizar.
      */
     @Update
@@ -22,7 +22,7 @@ interface CatedraticosDAO{
 
 
     /**
-     * Remueve una tupla de la tabla Catedraticos, Clases y RegistroActividad.
+     * Remueve una tupla de la tabla Catedraticos.
      * @param catedraticos el valor de la tupla a remover.
      */
     @Delete
