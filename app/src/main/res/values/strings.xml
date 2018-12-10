@@ -11,8 +11,10 @@
     <string name="hintCorreo">Correo Electronico</string>
     <string name="hintFacultad">Facultad</string>
     <string name="hintTelefono">Telefono</string>
+    <string name="hintCodigoCatedratico">Codigo de Catedratico</string>
     <string name="btnAgregarCatedratico">Agregar Catedratico</string>
-    <string name="hintHora">Hora de La clase</string>
+    <string name="hintHora">Hora de la clase</string>
+    <string name="hintCatedraticoAsignado">Catedratico Asignado</string>
 
 
 </resources>
