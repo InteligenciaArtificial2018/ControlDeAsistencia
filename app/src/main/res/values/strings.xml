@@ -5,4 +5,13 @@
     <string name="hintSeccion">Secciòn</string>
     <string name="hintAula">Aula</string>
     <string name="btnAgregarClase">Agregar la Clase</string>
+    <string name="hintIdCatedratico">Número de Identidad</string>
+    <string name="hintNombre">Nombre</string>
+    <string name="hintApellido">Apellido</string>
+    <string name="hintCorreo">Correo Electronico</string>
+    <string name="hintFacultad">Facultad</string>
+    <string name="hintTelefono">Telefono</string>
+    <string name="btnAgregarCatedratico">Agregar Catedratico</string>
+
+
 </resources>

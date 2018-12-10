@@ -6,7 +6,7 @@ import android.arch.persistence.room.ForeignKey
 import android.arch.persistence.room.PrimaryKey
 
 @Entity (tableName = "Registo de Actividad",
-    foreignKeys = arrayOf(ForeignKey(entity = Clases::class, parentColumns = arrayOf("idCodigo"), childColumns = arrayOf("idcodigo")))
+    foreignKeys = arrayOf(ForeignKey(entity = Clases::class, parentColumns = arrayOf("idCodigo"), childColumns = arrayOf("Codigo de Clase")))
 )
 
 class RegistroActividad(
