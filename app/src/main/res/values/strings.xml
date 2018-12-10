@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">ControlDeAsistencia</string>
+    <string name="hintCodigoClase">Codigo Clase</string>
+    <string name="hintAsignatura">Nombre de la Clase</string>
+    <string name="hintSeccion">Secciòn</string>
+    <string name="hintAula">Secciòn</string>
+    <string name="btnAgregarClase">Agregar la Clase</string>
 </resources>
