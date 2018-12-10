@@ -12,6 +12,7 @@
     <string name="hintFacultad">Facultad</string>
     <string name="hintTelefono">Telefono</string>
     <string name="btnAgregarCatedratico">Agregar Catedratico</string>
+    <string name="hintHora">Hora de La clase</string>
 
 
 </resources>
