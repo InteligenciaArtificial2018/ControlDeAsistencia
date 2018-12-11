@@ -16,6 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".AgregarCatedratico"/>
+        <activity android:name=".AgregarClase"/>
+        <activity android:name="RegistroActividad"/>
+
     </application>
 
 </manifest>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ControlDeAsistencia</string>
+    <string name="app_name">Control de Asistencia</string>
     <string name="hintCodigoClase">Codigo Clase</string>
     <string name="hintAsignatura">Nombre de la Clase</string>
     <string name="hintSeccion">Secciòn</string>
@@ -15,6 +15,9 @@
     <string name="btnAgregarCatedratico">Agregar Catedratico</string>
     <string name="hintHora">Hora de la clase</string>
     <string name="hintCatedraticoAsignado">Catedratico Asignado</string>
+    <string name="agregar_catedratico">Agregar Catedratico</string>
+    <string name="agregar_asignatura">Agregar Asignatura</string>
+    <string name="realizar_revisi_n">Realizar Revisiòn</string>
 
 
 </resources>
