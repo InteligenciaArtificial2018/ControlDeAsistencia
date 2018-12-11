@@ -19,7 +19,7 @@ interface ClasesDAO{
      * @param clases  el valor de la tupla a actualizar.
      */
     @Update
-    fun updateCatedraticos(clases: Clases)
+    fun updateClases(clases: Clases)
 
 
     /**

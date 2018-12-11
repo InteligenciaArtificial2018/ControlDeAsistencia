@@ -19,7 +19,6 @@ class Clases(
     @ColumnInfo(name = "Aula")
     var aula: String = "",
     @ColumnInfo(name = "Codigo de Catedratico")
-    var idCatedratico: String = "") {
+    var idCatedratico: String = "",
     @PrimaryKey(autoGenerate = false)
-    var idCodigo: String = ""
-}
+    var idCodigo: String = "")
