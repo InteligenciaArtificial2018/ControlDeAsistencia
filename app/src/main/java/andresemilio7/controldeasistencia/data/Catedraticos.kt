@@ -17,5 +17,5 @@ class Catedraticos(
     @ColumnInfo(name = "Telefono")
     var telefono: Int = 0) {
     @PrimaryKey(autoGenerate = false)
-    var idcatedratico: String = ""
+    var idCatedratico: String = ""
 }

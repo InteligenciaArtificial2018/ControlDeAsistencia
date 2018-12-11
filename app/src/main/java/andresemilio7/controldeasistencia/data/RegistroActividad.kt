@@ -6,7 +6,8 @@ import android.arch.persistence.room.ForeignKey
 import android.arch.persistence.room.PrimaryKey
 
 @Entity (tableName = "Registo de Actividad",
-    foreignKeys = arrayOf(ForeignKey(entity = Clases::class, parentColumns = arrayOf("idCodigo"), childColumns = arrayOf("Codigo de Clase")))
+    foreignKeys = arrayOf(ForeignKey(entity = Clases::class, parentColumns = arrayOf("idCodigo"), childColumns = arrayOf("Codigo de Clase")),
+                          ForeignKey(entity = Catedraticos::class, parentColumns = arrayOf("idCatedratico"), childColumns = arrayOf("Catedratico")))
 )
 
 class RegistroActividad(
@@ -17,7 +18,7 @@ class RegistroActividad(
     @ColumnInfo(name = "Codigo de Clase")
     var idcodigo: String = "",
     @ColumnInfo(name = "Catedratico")
-    var idCatedraticos: String = "",
+    var idCatedratico: String = "",
     @ColumnInfo(name = "Revision")
     var revision: Boolean ) {
     @PrimaryKey(autoGenerate = true)
