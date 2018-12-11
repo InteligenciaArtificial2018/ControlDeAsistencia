@@ -12,6 +12,7 @@ abstract class ControlDeAsistenciaDatabase: RoomDatabase() {
      */
     abstract fun getCatedraticosDao(): CatedraticosDAO
     abstract fun getClasesDao(): ClasesDAO
+    abstract fun getRegistroActividadDAO(): RegistroActividadDAO
 
     /**
      * Un patrón de diseño Singleton es utilizado para asegurarnos que
