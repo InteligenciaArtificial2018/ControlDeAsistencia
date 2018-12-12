@@ -18,6 +18,9 @@
     <string name="agregar_catedratico">Agregar Catedratico</string>
     <string name="agregar_asignatura">Agregar Asignatura</string>
     <string name="realizar_revisi_n">Realizar Revisiòn</string>
+    <string name="consultar_catedraticos">Consultar Catedraticos</string>
+    <string name="consultar_asignatura">Consultar Asignatura</string>
+    <string name="consultar_revisi_n">Consultar Revisiòn</string>
 
 
 </resources>
