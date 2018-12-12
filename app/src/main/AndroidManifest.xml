@@ -19,6 +19,7 @@
         <activity android:name=".AgregarCatedratico"/>
         <activity android:name=".AgregarClase"/>
         <activity android:name="RegistroActividad"/>
+        <activity android:name=".ConsultaCatedratico"/>
 
 
     </application>
