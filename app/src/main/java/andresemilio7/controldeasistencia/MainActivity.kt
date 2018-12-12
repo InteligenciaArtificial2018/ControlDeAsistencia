@@ -32,19 +32,21 @@ class MainActivity : AppCompatActivity(), CatedraticoAdapter.OnCatedraticoClickL
         val btnconrev = findViewById<Button>(R.id.btnConsultaRegistro)
 
         btncat.setOnClickListener {
-            val intent = Intent(this, AgregarCatedratico::class.java)
-            startActivity(intent)
+            val intentCatedratico = Intent(this, AgregarCatedratico::class.java)
+            startActivity(intentCatedratico)
         }
 
         btnclase.setOnClickListener {
-            val intent = Intent(this, AgregarClase::class.java)
-            startActivity(intent)
+            val intentClase = Intent(this, AgregarClase::class.java)
+            startActivity(intentClase)
         }
 
         btnrev.setOnClickListener {
-            val intent = Intent(this,RegistroActividad::class.java)
-            startActivity(intent)
+            val intentRegistro = Intent(this,RegistroActividad::class.java)
+            startActivity(intentRegistro)
         }
+
+
 
 
     }
