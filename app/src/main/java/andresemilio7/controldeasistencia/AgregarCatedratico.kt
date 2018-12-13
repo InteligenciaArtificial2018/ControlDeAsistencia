@@ -16,7 +16,7 @@ class AgregarCatedratico : AppCompatActivity() {
 
         controlAsistenciaDB = ControlDeAsistenciaDatabase.getInstance(this)
 
-        val id = intent.getStringExtra("id")
+
         val usuario = intent.getStringExtra("idcatedratico")
         val nombre = intent.getStringExtra("nombre")
         val apellido = intent.getStringExtra("apellido")
@@ -25,12 +25,13 @@ class AgregarCatedratico : AppCompatActivity() {
         val telefono = intent.getStringExtra("telefono")
 
 
-        if (id == null  || id == ""){
+        if (usuario == null  || usuario == ""){
             btnAgregarCatedratico.setOnClickListener {
-                val maestro = Catedraticos(usuario, nombre, apellido, correo, facultad, telefono)
+                val maestro = Catedraticos(etNombre.text.toString(), etApellido.text.toString(), etCorreo.text.toString(), etFacultad.text.toString(), etTelefono.text.toString(), etIdCatedratico.text.toString())
                 controlAsistenciaDB?.getCatedraticosDao()?.saveCatedraticos(maestro)
-                    finish()
                 Toast.makeText(this, "Guardado", Toast.LENGTH_SHORT).show()
+                finish()
+
             }
         } else{
             etIdCatedratico.setText(usuario)
@@ -40,10 +41,11 @@ class AgregarCatedratico : AppCompatActivity() {
             etFacultad.setText(facultad)
             etTelefono.setText(telefono)
             btnAgregarCatedratico.setOnClickListener{
-                val maestro = Catedraticos(etIdCatedratico.text.toString(),etNombre.text.toString(), etApellido.text.toString(), etCorreo.text.toString(), etFacultad.text.toString(), etTelefono.text.toString())
+                val maestro = Catedraticos(etNombre.text.toString(), etApellido.text.toString(), etCorreo.text.toString(), etFacultad.text.toString(), etTelefono.text.toString(), etIdCatedratico.text.toString())
                 controlAsistenciaDB?.getCatedraticosDao()?.updateCatedraticos(maestro)
-                finish()
                 Toast.makeText(this, "No guardado", Toast.LENGTH_SHORT).show()
+                finish()
+
             }
 
 
