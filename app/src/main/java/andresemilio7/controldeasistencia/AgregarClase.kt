@@ -1,11 +1,10 @@
 package andresemilio7.controldeasistencia
 
-import andresemilio7.controldeasistencia.data.Catedraticos
 import andresemilio7.controldeasistencia.data.Clases
 import andresemilio7.controldeasistencia.data.ControlDeAsistenciaDatabase
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import kotlinx.android.synthetic.main.agregarcatedratico.*
+import android.widget.Toast
 import kotlinx.android.synthetic.main.agregarclase.*
 
 class AgregarClase: AppCompatActivity() {
@@ -17,29 +16,30 @@ class AgregarClase: AppCompatActivity() {
 
         controlAsistenciaDB = ControlDeAsistenciaDatabase.getInstance(this)
 
-        val codigoclase = intent.getStringExtra("idCodigo")
         val asignatura = intent.getStringExtra("asignatura")
         val seccion = intent.getStringExtra("seccion")
-        val aula = intent.getStringExtra("aula")
         val hora = intent.getStringExtra("hora")
-        val catedratico = intent.getStringExtra("idCatedratico")
+        val aula = intent.getStringExtra("aula")
+        val catedratico = intent.getIntExtra("idCaterdatico", 0)
 
 
-        if (codigoclase == null  || codigoclase == ""){
+        if (asignatura == null  || asignatura == ""){
             btnAgregarClase.setOnClickListener {
-                val clases = Clases(codigoclase, asignatura, seccion, aula, hora, catedratico)
+                val clases = Clases(asignatura, seccion, hora, aula, catedratico)
                 controlAsistenciaDB?.getClasesDao()?.saveClases(clases)
                 finish()
+                Toast.makeText(this, "Seguardo", Toast.LENGTH_SHORT).show()
             }
         } else{
-            etCodigoClase.setText(codigoclase)
+            val codigoclase = intent.getIntExtra("idCodigo", 0)
             etAsignatura.setText(asignatura)
             etSeccion.setText(seccion)
-            etAula.setText(aula)
             etHora.setText(hora)
+            etAula.setText(aula)
             etCodigoCatedratico.setText(catedratico)
             btnAgregarClase.setOnClickListener{
-                val clases = Clases(etCodigoClase.text.toString(),etAsignatura.text.toString(), etSeccion.text.toString(), etAula.text.toString(), etHora.text.toString(), etCodigoCatedratico.text.toString())
+                val clases = Clases(etAsignatura.text.toString(), etSeccion.text.toString(), etAula.text.toString(), etHora.text.toString(), etCodigoCatedratico.id)
+                clases.idCodigo = codigoclase
                 controlAsistenciaDB?.getClasesDao()?.updateClases(clases)
                 finish()
             }

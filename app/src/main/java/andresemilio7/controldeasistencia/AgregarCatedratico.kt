@@ -15,6 +15,7 @@ class AgregarCatedratico : AppCompatActivity() {
 
         controlAsistenciaDB = ControlDeAsistenciaDatabase.getInstance(this)
 
+        val id = intent.getStringExtra("id")
         val usuario = intent.getStringExtra("idcatedratico")
         val nombre = intent.getStringExtra("nombre")
         val apellido = intent.getStringExtra("apellido")
@@ -23,11 +24,12 @@ class AgregarCatedratico : AppCompatActivity() {
         val telefono = intent.getStringExtra("telefono")
 
 
-        if (usuario == null  || usuario == ""){
+        if (id == null  || id == ""){
             btnAgregarCatedratico.setOnClickListener {
                 val maestro = Catedraticos(usuario, nombre, apellido, correo, facultad, telefono)
                 controlAsistenciaDB?.getCatedraticosDao()?.saveCatedraticos(maestro)
                     finish()
+
             }
         } else{
             etIdCatedratico.setText(usuario)

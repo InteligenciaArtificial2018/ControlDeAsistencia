@@ -7,7 +7,7 @@ import android.arch.persistence.room.PrimaryKey
 
 
 @Entity(tableName = "Clases",
-    foreignKeys = arrayOf(ForeignKey(entity = Catedraticos::class, parentColumns = arrayOf("idCatedratico"), childColumns = arrayOf("Codigo de Catedratico")))
+    foreignKeys = arrayOf(ForeignKey(entity = Catedraticos::class, parentColumns = arrayOf("id"), childColumns = arrayOf("CodigoCatedratico")))
 )
 class Clases(
     @ColumnInfo(name = "Asignatura")
@@ -18,7 +18,8 @@ class Clases(
     var hora: String = "",
     @ColumnInfo(name = "Aula")
     var aula: String = "",
-    @ColumnInfo(name = "Codigo de Catedratico")
-    var idCatedratico: String = "",
-    @PrimaryKey(autoGenerate = false)
-    var idCodigo: String = "")
+    @ColumnInfo(name = "CodigoCatedratico")
+    var idCatedratico: Int = 0) {
+    @PrimaryKey(autoGenerate = true)
+    var idCodigo: Int = 0
+    }

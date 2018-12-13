@@ -6,8 +6,8 @@ import android.arch.persistence.room.ForeignKey
 import android.arch.persistence.room.PrimaryKey
 
 @Entity (tableName = "Registo de Actividad",
-    foreignKeys = arrayOf(ForeignKey(entity = Clases::class, parentColumns = arrayOf("idCodigo"), childColumns = arrayOf("Codigo de Clase")),
-                          ForeignKey(entity = Catedraticos::class, parentColumns = arrayOf("idCatedratico"), childColumns = arrayOf("Catedratico")))
+    foreignKeys = arrayOf(ForeignKey(entity = Clases::class, parentColumns = arrayOf("idCodigo"), childColumns = arrayOf("CodigoClase")),
+                          ForeignKey(entity = Catedraticos::class, parentColumns = arrayOf("id"), childColumns = arrayOf("Catedratico")))
 )
 
 class RegistroActividad(
@@ -15,7 +15,7 @@ class RegistroActividad(
     var hora: String = "",
     @ColumnInfo(name = "Fecha")
     var fecha: String = "",
-    @ColumnInfo(name = "Codigo de Clase")
+    @ColumnInfo(name = "CodigoClase")
     var idcodigo: String = "",
     @ColumnInfo(name = "Catedratico")
     var idCatedratico: String = "",

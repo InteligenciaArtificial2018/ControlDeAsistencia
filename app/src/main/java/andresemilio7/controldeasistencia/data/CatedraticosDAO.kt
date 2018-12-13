@@ -5,15 +5,15 @@ import android.arch.persistence.room.*
 @Dao
 interface CatedraticosDAO{
 
-    @Query("SELECT * FROM catedraticos ORDER BY idCatedratico ASC")
+    @Query("SELECT * FROM Catedraticos ORDER BY id ASC")
     fun getCatedraticosList(): List<Catedraticos>
 
     /**
      * Retorna una tupla desde la tabla catedraticos
      * @param idcatedratico el valor de la llave primaria a retornar.
      */
-    @Query("SELECT * FROM catedraticos WHERE idCatedratico = :idcatedratico")
-    fun getCatedraticosItem(idcatedratico: String): Catedraticos
+    @Query("SELECT * FROM Catedraticos WHERE id = :id")
+    fun getCatedraticosItem(id: Int): Catedraticos
 
 
 
