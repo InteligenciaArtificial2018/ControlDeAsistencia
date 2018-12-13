@@ -1,18 +1,17 @@
 package andresemilio7.controldeasistencia.data
 
-import android.arch.persistence.room.ColumnInfo
-import android.arch.persistence.room.Entity
-import android.arch.persistence.room.ForeignKey
-import android.arch.persistence.room.PrimaryKey
+import android.arch.persistence.room.*
 
 
 @Entity(tableName = "Clases",
-    foreignKeys = arrayOf(ForeignKey(entity = Catedraticos::class, parentColumns = arrayOf("id"), childColumns = arrayOf("CodigoCatedratico")))
+    foreignKeys = arrayOf(ForeignKey(entity = Catedraticos::class, parentColumns = arrayOf("id"), childColumns = arrayOf("CodigoCatedratico"))),
+    indices = arrayOf(Index(value =  ["Hora"], unique = true))
+
 )
 class Clases(
     @ColumnInfo(name = "Asignatura")
     var asignatura: String = "",
-    @ColumnInfo(name = "Secciòn")
+    @ColumnInfo(name = "Seccion")
     var seccion: String = "",
     @ColumnInfo(name = "Hora")
     var hora: String = "",
