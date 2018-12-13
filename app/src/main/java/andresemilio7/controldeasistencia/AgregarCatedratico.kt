@@ -4,6 +4,7 @@ import andresemilio7.controldeasistencia.data.Catedraticos
 import andresemilio7.controldeasistencia.data.ControlDeAsistenciaDatabase
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.widget.Toast
 import kotlinx.android.synthetic.main.agregarcatedratico.*
 
 class AgregarCatedratico : AppCompatActivity() {
@@ -29,7 +30,7 @@ class AgregarCatedratico : AppCompatActivity() {
                 val maestro = Catedraticos(usuario, nombre, apellido, correo, facultad, telefono)
                 controlAsistenciaDB?.getCatedraticosDao()?.saveCatedraticos(maestro)
                     finish()
-
+                Toast.makeText(this, "Guardado", Toast.LENGTH_SHORT).show()
             }
         } else{
             etIdCatedratico.setText(usuario)
@@ -42,6 +43,7 @@ class AgregarCatedratico : AppCompatActivity() {
                 val maestro = Catedraticos(etIdCatedratico.text.toString(),etNombre.text.toString(), etApellido.text.toString(), etCorreo.text.toString(), etFacultad.text.toString(), etTelefono.text.toString())
                 controlAsistenciaDB?.getCatedraticosDao()?.updateCatedraticos(maestro)
                 finish()
+                Toast.makeText(this, "No guardado", Toast.LENGTH_SHORT).show()
             }
 
 
