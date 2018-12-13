@@ -22,7 +22,6 @@
     <string name="consultar_asignatura">Consultar Asignatura</string>
     <string name="consultar_revisi_n">Consultar Revisiòn</string>
     <string name="asignatura">Asignatura</string>
-    <string name="asignatura">Asignatura</string>
     <string name="catedratico">Catedratico</string>
     <string name="hora">Hora</string>
     <string name="aula">Aula</string>
@@ -30,6 +29,7 @@
     <string name="clase_realizada">Clase Realizada</string>
     <string name="clase_no_realizado">Clase NO Realizado</string>
     <string name="revision">Revision</string>
+    <string name="id_catedratico">Id Catedratico</string>
 
 
 </resources>
