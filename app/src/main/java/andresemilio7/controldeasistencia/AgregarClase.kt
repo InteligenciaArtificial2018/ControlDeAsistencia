@@ -27,8 +27,9 @@ class AgregarClase: AppCompatActivity() {
             btnAgregarClase.setOnClickListener {
                 val clases = Clases(asignatura, seccion, hora, aula, catedratico)
                 controlAsistenciaDB?.getClasesDao()?.saveClases(clases)
+                Toast.makeText(this, "Guardado", Toast.LENGTH_SHORT).show()
                 finish()
-                Toast.makeText(this, "Seguardo", Toast.LENGTH_SHORT).show()
+
             }
         } else{
             val codigoclase = intent.getIntExtra("idCodigo", 0)
@@ -41,12 +42,9 @@ class AgregarClase: AppCompatActivity() {
                 val clases = Clases(etAsignatura.text.toString(), etSeccion.text.toString(), etAula.text.toString(), etHora.text.toString(), etCodigoCatedratico.id)
                 clases.idCodigo = codigoclase
                 controlAsistenciaDB?.getClasesDao()?.updateClases(clases)
+                Toast.makeText(this, "No guardado", Toast.LENGTH_SHORT).show()
                 finish()
             }
-
-
         }
-
-
     }
 }

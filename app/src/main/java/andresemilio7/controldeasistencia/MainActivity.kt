@@ -46,6 +46,11 @@ class MainActivity : AppCompatActivity(){
             startActivity(intentConsultaCatedratico)
         }
 
+        btnconclase.setOnClickListener {
+            val intentConsultaClase = Intent(this,ConsultaClase::class.java)
+            startActivity(intentConsultaClase)
+        }
+
 
 
 
