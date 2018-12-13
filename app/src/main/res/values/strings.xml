@@ -29,6 +29,7 @@
     <string name="fecha">Fecha</string>
     <string name="clase_realizada">Clase Realizada</string>
     <string name="clase_no_realizado">Clase NO Realizado</string>
+    <string name="revision">Revision</string>
 
 
 </resources>
