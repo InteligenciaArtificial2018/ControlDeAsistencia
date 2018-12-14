@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
 
-class RegistroAdapter(var registroList: List<RegistroActividad>? = ArrayList<RegistroActividad>()): RecyclerView.Adapter<RegistroAdapter.ViewHolder>() {
+class RegistroAdapter(var registroList: List<RegistroDeActividad>? = ArrayList<RegistroDeActividad>()): RecyclerView.Adapter<RegistroAdapter.ViewHolder>() {
     private var onRegistroItemClickListener: OnRegistroClickListener? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, position: Int): RegistroAdapter.ViewHolder {
@@ -31,7 +31,7 @@ class RegistroAdapter(var registroList: List<RegistroActividad>? = ArrayList<Reg
         holder.onBindViews(position)
     }
 
-    class ViewHolder(val vista: View, val registroList: List<RegistroActividad>): RecyclerView.ViewHolder(vista) {
+    class ViewHolder(val vista: View, val registroList: List<RegistroDeActividad>): RecyclerView.ViewHolder(vista) {
         fun onBindViews(position: Int) {
             vista.findViewById<EditText>(R.id.etAsignatura).text = registroList.get(position).idcodigo
             vista.findViewById<EditText>(R.id.etCatedratico).text = registroList.get(position).idCatedratico
@@ -53,9 +53,8 @@ class RegistroAdapter(var registroList: List<RegistroActividad>? = ArrayList<Reg
      * Definimos la interface que permite extender métodos que el RecyclerView no posee
      */
     interface OnRegistroClickListener {
-        fun onCatedraticoItemClickListener(registroActividad: RegistroActividad)
-        fun onCatedraticoItemLongClickListener(registroActividad: RegistroActividad)
+        fun onCatedraticoItemClickListener(registroActividad: RegistroDeActividad)
+        fun onCatedraticoItemLongClickListener(registroActividad: RegistroDeActividad)
     }
 
-} {
 }

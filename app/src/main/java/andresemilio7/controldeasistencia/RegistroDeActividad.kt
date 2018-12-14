@@ -14,7 +14,7 @@ class RegistroDeActividad : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.registroactividad)
+        setContentView(R.layout.template_registro)
 
 
         controlAsistenciaDB = ControlDeAsistenciaDatabase.getInstance(this)
@@ -29,7 +29,7 @@ class RegistroDeActividad : AppCompatActivity() {
 
         if (asignatura == null  || asignatura == ""){
             btnAgregarRevision.setOnClickListener {
-                val revision = RegistroActividad(etAsignatura.text.toString(), etCatedratico.text.toString(),
+                val revision = RegistroDeActividad(etAsignatura.text.toString(), etCatedratico.text.toString(),
                     etHora.text.toString(), etAula.text.toString(), etFechaRev.text.toString(), revision)
                 controlAsistenciaDB?.getRegistroActividadDAO()?.saveRegistroActividad(revision)
                 Toast.makeText(this, "Guardado", Toast.LENGTH_SHORT).show()
@@ -43,7 +43,7 @@ class RegistroDeActividad : AppCompatActivity() {
             etAula.setText(aula)
             etFechaRev.setText(fecha)
             btnAgregarRevision.setOnClickListener{
-                val revision = RegistroActividad(etAsignatura.text.toString(), etCatedratico.text.toString(), etHora.text.toString(), etAula.text.toString(), etFechaRev.text.toString(), revision)
+                val revision = RegistroDeActividad(etAsignatura.text.toString(), etCatedratico.text.toString(), etHora.text.toString(), etAula.text.toString(), etFechaRev.text.toString(), revision)
                 controlAsistenciaDB?.getRegistroActividadDAO()?.updateRegistroActividad(revision)
                 Toast.makeText(this, "No guardado", Toast.LENGTH_SHORT).show()
                 finish()
