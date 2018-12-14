@@ -18,32 +18,35 @@ class RegistrodeActividad : AppCompatActivity() {
 
 
         controlAsistenciaDB = ControlDeAsistenciaDatabase.getInstance(this)
-        rgRevision.checkedRadioButtonId
+
 
         val asignatura = intent.getStringExtra("idcodigo")
         val catedratico = intent.getStringExtra("idCatedratico")
         val hora = intent.getStringExtra("hora")
         val aula = intent.getStringExtra("aula")
         val fecha = intent.getStringExtra("fecha")
+        val registro = intent.getStringExtra("revision")
 
 
         if (asignatura == null  || asignatura == ""){
             btnAgregarRevision.setOnClickListener {
                 val revision = RegistroActividad(etAsignatura.text.toString(), etCatedratico.text.toString(),
-                    etHora.text.toString(), etAula.text.toString(), etFechaRev.text.toString(), revision.toString())
+                    etHora.text.toString(), etAula.text.toString(), etFechaRev.text.toString(), etregistro.toString())
                 controlAsistenciaDB?.getRegistroActividadDAO()?.saveRegistroActividad(revision)
                 Toast.makeText(this, "Guardado", Toast.LENGTH_SHORT).show()
                 finish()
 
             }
         } else{
+            val id = intent.getIntExtra("id", 0)
             etAsignatura.setText(asignatura)
             etCatedratico.setText(catedratico)
             etHora.setText(hora)
             etAula.setText(aula)
             etFechaRev.setText(fecha)
+            etregistro.setText(registro)
             btnAgregarRevision.setOnClickListener{
-                val revision = RegistroActividad(etAsignatura.text.toString(), etCatedratico.text.toString(), etHora.text.toString(), etAula.text.toString(), etFechaRev.text.toString(), revision.toString())
+                val revision = RegistroActividad(etAsignatura.text.toString(), etCatedratico.text.toString(), etHora.text.toString(), etAula.text.toString(), etFechaRev.text.toString(), etregistro.toString())
                 controlAsistenciaDB?.getRegistroActividadDAO()?.updateRegistroActividad(revision)
                 Toast.makeText(this, "No guardado", Toast.LENGTH_SHORT).show()
                 finish()
@@ -51,13 +54,7 @@ class RegistrodeActividad : AppCompatActivity() {
             }
         }
     }
-    fun onCheckedChanged(group: RadioGroup?, checkedId: Int) {
-        if (checkedId == R.id.rbVerificado) {
-            revision = 1
-        } else if (checkedId == R.id.rbNoRealizado) {
-            revision = 2
-        }
-    }
+
 
 
 

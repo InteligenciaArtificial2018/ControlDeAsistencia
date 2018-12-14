@@ -8,58 +8,55 @@
               tools:context=".RegistrodeActividad">
 
     <EditText
-            android:text="@string/asignatura"
             android:layout_width="match_parent"
+            android:inputType="textPersonName"
             android:layout_height="wrap_content" android:id="@+id/etAsignatura"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1" android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp" android:layout_marginTop="16dp" android:layout_marginBottom="8dp"/>
+            android:layout_marginRight="16dp" android:layout_marginTop="16dp" android:layout_marginBottom="8dp"
+            android:hint="@string/hintAsignatura"/>
     <EditText
-            android:text="@string/catedratico"
+            android:inputType="textPersonName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" android:id="@+id/etCatedratico"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1" android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp" android:layout_marginTop="16dp" android:layout_marginBottom="8dp"/>
+            android:layout_marginRight="16dp" android:layout_marginTop="16dp" android:layout_marginBottom="8dp"
+            android:hint="@string/hintIdCatedratico"/>
     <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="match_parent" android:layout_marginTop="8dp" android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp" android:layout_marginBottom="16dp">
         <EditText
-                android:text="@string/hora"
+                android:inputType="textPersonName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/etHora" android:layout_weight="1"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:textColor="@color/colorAccent" android:textSize="22sp"/>
+                android:textColor="@color/colorAccent" android:textSize="22sp"
+                android:hint="@string/hintHora"/>
         <EditText
-                android:text="@string/aula"
+                android:inputType="textPersonName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/etAula" android:layout_weight="1"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:textColor="@color/colorAccent" android:textSize="22sp"/>
+                android:textColor="@color/colorAccent" android:textSize="22sp"
+                android:hint="@string/hintAula"/>
         <EditText
-                android:text="@string/fecha"
+                android:inputType="textPersonName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/etFechaRev" android:layout_weight="1"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:textColor="@color/colorAccent" android:textSize="22sp"/>
+                android:textColor="@color/colorAccent" android:textSize="22sp"
+                android:hint="@string/fecha"/>
+        <EditText
+                android:inputType="textPersonName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/etregistro" android:layout_weight="1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/colorAccent" android:textSize="22sp"
+                android:hint="@string/registro"/>
     </LinearLayout>
 
-    <RadioGroup
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" android:layout_marginTop="8dp" android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp" android:layout_marginBottom="16dp"
-            android:id="@+id/rgRevision">
-        <RadioButton
-                android:text="@string/clase_realizada"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/rbVerificado"/>
-        <RadioButton
-                android:text="@string/clase_no_realizado"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/rbNoRealizado"/>
 
-    </RadioGroup>
     <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"

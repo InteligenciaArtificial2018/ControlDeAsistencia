@@ -9,7 +9,7 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.consultaregistro.*
 
-abstract class ConsultaRevision: AppCompatActivity(), RegistroAdapter.OnRegistroClickListener{
+ class ConsultaRevision: AppCompatActivity(), RegistroAdapter.OnRegistroClickListener{
 
     private var controlAsistenciaDatabase: ControlDeAsistenciaDatabase? = null
     private var registroAdapter: RegistroAdapter? = null

@@ -27,10 +27,10 @@ class RegistroAdapter(var registroList: List<RegistroActividad>? = ArrayList<Reg
     override fun onBindViewHolder(holder: RegistroAdapter.ViewHolder, position: Int) {
         // Obtener la posición del item clickeado
         holder.vista.setOnClickListener{
-            onRegistroItemClickListener?.onCatedraticoItemClickListener(registroList?.get(position)!!)
+            onRegistroItemClickListener?.onRegistroItemClickListener(registroList?.get(position)!!)
         }
         holder.vista.setOnLongClickListener{
-            onRegistroItemClickListener?.onCatedraticoItemLongClickListener(registroList?.get(position)!!)
+            onRegistroItemClickListener?.onRegistroItemLongClickListener(registroList?.get(position)!!)
             true
         }
         holder.onBindViews(position)
@@ -38,7 +38,8 @@ class RegistroAdapter(var registroList: List<RegistroActividad>? = ArrayList<Reg
 
     class ViewHolder(val vista: View, val registroList: List<RegistroActividad>): RecyclerView.ViewHolder(vista) {
         fun onBindViews(position: Int) {
-            vista.findViewById<TextView>(R.id.tvNombreClase).text = registroList.get(position).idcodigo
+
+            vista.findViewById<TextView>(R.id.tvNombreClase).text = registroList.get(position).id.toString()
             vista.findViewById<TextView>(R.id.tvPrimeraLetraClase).text = registroList.get(position).idcodigo.first().toUpperCase().toString()
         }
     }
@@ -56,8 +57,6 @@ class RegistroAdapter(var registroList: List<RegistroActividad>? = ArrayList<Reg
      * Definimos la interface que permite extender métodos que el RecyclerView no posee
      */
     interface OnRegistroClickListener {
-        fun onCatedraticoItemClickListener(registroActividad: RegistroActividad)
-        fun onCatedraticoItemLongClickListener(registroActividad: RegistroActividad)
         fun onRegistroItemClickListener(registroActividad: RegistroActividad)
         fun onRegistroItemLongClickListener(registroActividad: RegistroActividad)
     }
