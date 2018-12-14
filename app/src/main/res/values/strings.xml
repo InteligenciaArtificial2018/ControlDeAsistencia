@@ -1,3 +1,37 @@
 <resources>
-    <string name="app_name">ControlDeAsistencia</string>
+    <string name="app_name">Control de Asistencia</string>
+    <string name="hintCodigoClase">Codigo Clase</string>
+    <string name="hintAsignatura">Nombre de la Clase</string>
+    <string name="hintSeccion">Secciòn</string>
+    <string name="hintAula">Aula</string>
+    <string name="btnAgregarClase">Agregar la Clase</string>
+    <string name="hintIdCatedratico">Usuario de Catedratico</string>
+    <string name="hintNombre">Nombre</string>
+    <string name="hintApellido">Apellido</string>
+    <string name="hintCorreo">Correo Electronico</string>
+    <string name="hintFacultad">Facultad</string>
+    <string name="hintTelefono">Telefono</string>
+    <string name="hintCodigoCatedratico">Codigo de Catedratico</string>
+    <string name="btnAgregarCatedratico">Agregar Catedratico</string>
+    <string name="hintHora">Hora de la clase</string>
+    <string name="hintCatedraticoAsignado">Catedratico Asignado</string>
+    <string name="agregar_catedratico">Agregar Catedratico</string>
+    <string name="agregar_asignatura">Agregar Asignatura</string>
+    <string name="realizar_revisi_n">Realizar Revisiòn</string>
+    <string name="consultar_catedraticos">Consultar Catedraticos</string>
+    <string name="consultar_asignatura">Consultar Asignatura</string>
+    <string name="consultar_revisi_n">Consultar Revisiòn</string>
+    <string name="asignatura">Asignatura</string>
+    <string name="catedratico">Catedratico</string>
+    <string name="hora">Hora</string>
+    <string name="aula">Aula</string>
+    <string name="fecha">Fecha</string>
+    <string name="clase_realizada">Clase Realizada</string>
+    <string name="clase_no_realizado">Clase NO Realizado</string>
+    <string name="revision">Revision</string>
+    <string name="id_catedratico">Id Catedratico</string>
+    <string name="agregar_revisi_n">Agregar revisiòn</string>
+    <string name="registro">registro</string>
+
+
 </resources>

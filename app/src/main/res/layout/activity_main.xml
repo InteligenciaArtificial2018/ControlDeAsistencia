@@ -5,15 +5,84 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        tools:context=".MainActivity" tools:background="#CFD8DC">
 
-    <TextView
-            android:layout_width="wrap_content"
+    <Button
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
-
+            android:id="@+id/btnAgregarCatedraticoMain"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginTop="60dp"
+            android:visibility="visible" android:textColorLink="@color/colorAccent"
+            android:background="@color/colorAccent"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button" android:textSize="30sp"
+            android:textStyle="bold|italic" android:text="@string/agregar_catedratico"
+            android:textColor="@color/colorWhite" tools:typeface="sans"
+            android:fontFamily="sans-serif-condensed"/>
+    <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnAgregarClaseMain" android:layout_marginTop="25dp"
+            app:layout_constraintTop_toBottomOf="@+id/btnAgregarCatedraticoMain"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:background="@color/colorAccent"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button" android:textSize="30sp"
+            android:textStyle="bold|italic" android:text="@string/agregar_asignatura"
+            android:textColor="@color/colorWhite" android:typeface="sans"
+            android:fontFamily="sans-serif-condensed"/>
+    <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnRegistroactividadMain" android:layout_marginTop="25dp"
+            app:layout_constraintTop_toBottomOf="@+id/btnAgregarClaseMain" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintHorizontal_bias="1.0"
+            android:background="@color/colorAccent"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button" android:textSize="30sp"
+            android:textStyle="bold|italic" android:text="@string/realizar_revisi_n"
+            android:textColor="@color/colorWhite" android:typeface="sans"
+            android:fontFamily="sans-serif-condensed"/>
+    <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnConsultaCatedratico" android:layout_marginTop="25dp"
+            app:layout_constraintTop_toBottomOf="@+id/btnRegistroactividadMain"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintHorizontal_bias="1.0"
+            android:background="@color/colorAccent"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button" android:textSize="30sp"
+            android:textStyle="bold|italic" android:text="@string/consultar_catedraticos"
+            android:textColor="@color/colorWhite" android:typeface="sans"
+            android:fontFamily="sans-serif-condensed"/>
+    <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnConsultaClase" android:layout_marginTop="25dp"
+            app:layout_constraintTop_toBottomOf="@+id/btnConsultaCatedratico"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintHorizontal_bias="1.0"
+            android:background="@color/colorAccent"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button" android:textSize="30sp"
+            android:textStyle="bold|italic" android:text="@string/consultar_asignatura"
+            android:textColor="@color/colorWhite" android:typeface="sans"
+            android:fontFamily="sans-serif-condensed"/>
+    <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnConsultaRegistro" android:layout_marginTop="25dp"
+            app:layout_constraintTop_toBottomOf="@+id/btnConsultaClase"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintHorizontal_bias="1.0"
+            android:background="@color/colorAccent"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button" android:textSize="30sp"
+            android:textStyle="bold|italic" android:text="@string/consultar_revisi_n"
+            android:textColor="@color/colorWhite" android:typeface="sans"
+            android:fontFamily="sans-serif-condensed"/>
 </android.support.constraint.ConstraintLayout>

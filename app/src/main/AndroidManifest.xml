@@ -16,6 +16,15 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".AgregarCatedratico"/>
+        <activity android:name=".AgregarClase"/>
+        <activity android:name=".RegistrodeActividad"/>
+        <activity android:name=".ConsultaCatedratico"/>
+        <activity android:name=".ConsultaClase"/>
+        <activity android:name=".ConsultaRevision"/>
+
+
+
     </application>
 
 </manifest>
