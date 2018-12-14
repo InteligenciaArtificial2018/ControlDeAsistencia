@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity(){
         }
 
         btnrev.setOnClickListener {
-            val intentRegistro = Intent(this,RegistroActividad::class.java)
+            val intentRegistro = Intent(this,RegistrodeActividad::class.java)
             startActivity(intentRegistro)
         }
 

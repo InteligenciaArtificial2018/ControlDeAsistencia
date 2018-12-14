@@ -4,19 +4,19 @@ import android.arch.persistence.room.*
 
 @Dao
 interface RegistroActividadDAO {
-    @Query("SELECT * FROM RegistoDeActividad ORDER BY id ASC")
-    fun getRegistrosList(): List<RegistroActividad>
+    @Query("SELECT * FROM RegistroActividad ORDER BY id ASC")
+    fun getRegistroList(): List<RegistroActividad>
 
     /**
      * Retorna una tupla desde la tabla catedraticos
-     * @param id el valor de la llave primaria a retornar.
+     * @param idcatedratico el valor de la llave primaria a retornar.
      */
-    @Query("SELECT * FROM RegistoDeActividad WHERE id = :id")
-    fun getRegistrosItem(id: Int): RegistroActividad
+    @Query("SELECT * FROM RegistroActividad WHERE id = :id")
+    fun getRegistroItem(id: Int): RegistroActividad
 
     /**
      * Inserta una nueva tupla en la tabla RegistroActividad.
-     * @param registroactivid la tupla a insertar en la tabla.
+     * @param registroactividad la tupla a insertar en la tabla.
      */
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     fun saveRegistroActividad(registroActividad: RegistroActividad)

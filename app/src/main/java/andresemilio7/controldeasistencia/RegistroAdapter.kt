@@ -1,16 +1,21 @@
 package andresemilio7.controldeasistencia
 
+import andresemilio7.controldeasistencia.data.Clases
+import andresemilio7.controldeasistencia.data.RegistroActividad
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
+import android.widget.TextView
+import kotlinx.android.synthetic.main.agregarcatedratico.*
+import kotlinx.android.synthetic.main.registroactividad.*
 
-class RegistroAdapter(var registroList: List<RegistroDeActividad>? = ArrayList<RegistroDeActividad>()): RecyclerView.Adapter<RegistroAdapter.ViewHolder>() {
+class RegistroAdapter(var registroList: List<RegistroActividad>? = ArrayList<RegistroActividad>()): RecyclerView.Adapter<RegistroAdapter.ViewHolder>() {
     private var onRegistroItemClickListener: OnRegistroClickListener? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, position: Int): RegistroAdapter.ViewHolder {
-        val vista = LayoutInflater.from(parent.context).inflate(R.layout.template_registro, parent, false)
+        val vista = LayoutInflater.from(parent.context).inflate(R.layout.registroactividad, parent, false)
 
         return ViewHolder(vista, registroList!!)
     }
@@ -31,12 +36,10 @@ class RegistroAdapter(var registroList: List<RegistroDeActividad>? = ArrayList<R
         holder.onBindViews(position)
     }
 
-    class ViewHolder(val vista: View, val registroList: List<RegistroDeActividad>): RecyclerView.ViewHolder(vista) {
+    class ViewHolder(val vista: View, val registroList: List<RegistroActividad>): RecyclerView.ViewHolder(vista) {
         fun onBindViews(position: Int) {
-            vista.findViewById<EditText>(R.id.etAsignatura).text = registroList.get(position).idcodigo
-            vista.findViewById<EditText>(R.id.etCatedratico).text = registroList.get(position).idCatedratico
-            vista.findViewById<EditText>(R.id.etHora).text = registroList.get(position).hora
-
+            vista.findViewById<TextView>(R.id.tvNombreClase).text = registroList.get(position).idcodigo
+            vista.findViewById<TextView>(R.id.tvPrimeraLetraClase).text = registroList.get(position).idcodigo.first().toUpperCase().toString()
         }
     }
 
@@ -53,8 +56,10 @@ class RegistroAdapter(var registroList: List<RegistroDeActividad>? = ArrayList<R
      * Definimos la interface que permite extender métodos que el RecyclerView no posee
      */
     interface OnRegistroClickListener {
-        fun onCatedraticoItemClickListener(registroActividad: RegistroDeActividad)
-        fun onCatedraticoItemLongClickListener(registroActividad: RegistroDeActividad)
+        fun onCatedraticoItemClickListener(registroActividad: RegistroActividad)
+        fun onCatedraticoItemLongClickListener(registroActividad: RegistroActividad)
+        fun onRegistroItemClickListener(registroActividad: RegistroActividad)
+        fun onRegistroItemLongClickListener(registroActividad: RegistroActividad)
     }
 
 }
