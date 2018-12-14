@@ -40,11 +40,11 @@ class ConsultaClase: AppCompatActivity(), ClaseAdapter.OnClaseClickListener{
      */
     override fun onClaseItemClickListener(clases: Clases) {
         val intent = Intent(this, AgregarClase::class.java)
-        intent.putExtra("asinatura", clases.asignatura)
-        intent.putExtra("seccion", clases.seccion)
-        intent.putExtra("hora", clases.hora)
-        intent.putExtra("aula", clases.aula)
-        intent.putExtra("catedratico", clases.idCatedratico)
+        intent.putExtra("Asignatura", clases.asignatura)
+        intent.putExtra("Seccion", clases.seccion)
+        intent.putExtra("Hora", clases.hora)
+        intent.putExtra("Aula", clases.aula)
+        intent.putExtra("CodigoCatedratico", clases.idCatedratico)
         startActivity(intent)
     }
 
@@ -57,12 +57,12 @@ class ConsultaClase: AppCompatActivity(), ClaseAdapter.OnClaseClickListener{
         // y un boton neutro (CANCEL) los cuales utilizaremos para Modificar, Eliminar y Cancelar
         builder.setPositiveButton(R.string.hintAsignatura) {dialog, wich ->
             // Realizar el llamado a la activity de agregar enviando los valores mediante el intent
-            val intent = Intent(this, Clases::class.java)
-            intent.putExtra("asinatura", clases.asignatura)
-            intent.putExtra("seccion", clases.seccion)
-            intent.putExtra("hora", clases.hora)
-            intent.putExtra("aula", clases.aula)
-            intent.putExtra("catedratico", clases.idCatedratico)
+            val intent = Intent(this, AgregarClase::class.java)
+            intent.putExtra("Asignatura", clases.asignatura)
+            intent.putExtra("Seccion", clases.seccion)
+            intent.putExtra("Hora", clases.hora)
+            intent.putExtra("Aula", clases.aula)
+            intent.putExtra("CodigoCatedratico", clases.idCatedratico)
             startActivity(intent)
         }
         // Crear el dialogo de alerta con todos los parámetros establecidos

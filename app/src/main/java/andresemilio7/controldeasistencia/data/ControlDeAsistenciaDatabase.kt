@@ -5,9 +5,9 @@ import android.arch.persistence.room.Room
 import android.arch.persistence.room.RoomDatabase
 import android.content.Context
 
-@Database(entities = [Catedraticos::class, Clases::class, RegistroActividad::class], version = 7, exportSchema = false)
+@Database(entities = [Catedraticos::class, Clases::class, RegistroActividad::class], version = 12, exportSchema = false)
 abstract class ControlDeAsistenciaDatabase: RoomDatabase() {
-    /**
+    /*1
      * Este es un método abstracto que retorna el DAO para la base de datos.
      */
     abstract fun getCatedraticosDao(): CatedraticosDAO

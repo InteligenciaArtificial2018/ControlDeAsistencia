@@ -16,16 +16,16 @@ class AgregarClase: AppCompatActivity() {
 
         controlAsistenciaDB = ControlDeAsistenciaDatabase.getInstance(this)
 
-        val asignatura = intent.getStringExtra("asignatura")
-        val seccion = intent.getStringExtra("seccion")
-        val hora = intent.getStringExtra("hora")
-        val aula = intent.getStringExtra("aula")
-        val catedratico = intent.getIntExtra("idCaterdatico", 0)
+        val asignatura = intent.getStringExtra("Asignatura")
+        val seccion = intent.getStringExtra("Seccion")
+        val hora = intent.getStringExtra("Hora")
+        val aula = intent.getStringExtra("Aula")
+        val catedratico = intent.getIntExtra("CodigoCatedratico", 0)
 
 
         if (asignatura == null  || asignatura == ""){
             btnAgregarClase.setOnClickListener {
-                val clases = Clases(asignatura, seccion, hora, aula, catedratico)
+                val clases = Clases(etAsignatura.text.toString(), etSeccion.text.toString(), etHora.text.toString(), etAula.text.toString(), etCodigoCatedratico.text.toString().toInt())
                 controlAsistenciaDB?.getClasesDao()?.saveClases(clases)
                 Toast.makeText(this, "Guardado", Toast.LENGTH_SHORT).show()
                 finish()
@@ -37,9 +37,10 @@ class AgregarClase: AppCompatActivity() {
             etSeccion.setText(seccion)
             etHora.setText(hora)
             etAula.setText(aula)
-            etCodigoCatedratico.setText(catedratico)
+            etCodigoCatedratico.setText("Tacue")
             btnAgregarClase.setOnClickListener{
-                val clases = Clases(etAsignatura.text.toString(), etSeccion.text.toString(),  etHora.text.toString(), etAula.text.toString(), etCodigoCatedratico.id)
+                val clases = Clases(etAsignatura.text.toString(), etSeccion.text.toString(),  etHora.text.toString(), etAula.text.toString(), etCodigoCatedratico.text.toString().toInt())
+
                 clases.idCodigo = codigoclase
                 controlAsistenciaDB?.getClasesDao()?.updateClases(clases)
                 Toast.makeText(this, "No guardado", Toast.LENGTH_SHORT).show()

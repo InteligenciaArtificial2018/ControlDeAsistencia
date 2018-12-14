@@ -35,8 +35,8 @@ class ClaseAdapter(var claseList: List<Clases>? = ArrayList<Clases>()): Recycler
 
     class ViewHolder(val vista: View, val claseList: List<Clases>): RecyclerView.ViewHolder(vista) {
         fun onBindViews(position: Int) {
-            vista.findViewById<TextView>(R.id.tvNombre).text = claseList.get(position).asignatura
-            vista.findViewById<TextView>(R.id.tvPrimeraLetra).text = claseList.get(position).asignatura.first().toUpperCase().toString()
+            vista.findViewById<TextView>(R.id.tvNombreClase).text = claseList.get(position).asignatura
+            vista.findViewById<TextView>(R.id.tvPrimeraLetraClase).text = claseList.get(position).asignatura.first().toUpperCase().toString()
         }
     }
 

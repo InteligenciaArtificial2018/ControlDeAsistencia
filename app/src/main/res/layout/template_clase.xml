@@ -24,13 +24,13 @@
                         android:id="@+id/ivCatedratic"/>
                 <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:id="@+id/tvPrimeraLetra" tools:text="A"
+                        android:layout_height="wrap_content" android:id="@+id/tvPrimeraLetraClase" tools:text="A"
                         android:textColor="@color/colorWhite" android:textSize="20sp" android:layout_gravity="center"/>
             </FrameLayout>
             <TextView
                     android:text="@string/asignatura"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content" android:id="@+id/tvNombre"
+                    android:layout_height="wrap_content" android:id="@+id/tvNombreClase"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/frameLayout" android:layout_marginStart="24dp"

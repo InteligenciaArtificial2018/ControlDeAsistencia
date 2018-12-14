@@ -3,10 +3,7 @@ package andresemilio7.controldeasistencia.data
 import android.arch.persistence.room.*
 
 
-@Entity(tableName = "Clases"/*,
-    foreignKeys = arrayOf(ForeignKey(entity = Catedraticos::class, parentColumns = arrayOf("id"), childColumns = arrayOf("CodigoCatedratico"))),
-    indices = arrayOf(Index(value =  ["Hora"], unique = true))*/
-
+@Entity(tableName = "Clases"
 )
 class Clases(
     @ColumnInfo(name = "Asignatura")
@@ -18,7 +15,7 @@ class Clases(
     @ColumnInfo(name = "Aula")
     var aula: String = "",
     @ColumnInfo(name = "CodigoCatedratico")
-    var idCatedratico: Int = 0) {
+    var idCatedratico: Int = 0){
     @PrimaryKey(autoGenerate = true)
-    var idCodigo: Int = 0
-    }
+    var idCodigo: Int = 0}
+

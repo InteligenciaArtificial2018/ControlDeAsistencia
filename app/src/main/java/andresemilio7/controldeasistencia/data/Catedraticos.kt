@@ -1,8 +1,6 @@
 package andresemilio7.controldeasistencia.data
 
-import android.arch.persistence.room.ColumnInfo
-import android.arch.persistence.room.Entity
-import android.arch.persistence.room.PrimaryKey
+import android.arch.persistence.room.*
 
 @Entity(tableName = "Catedraticos")
 class Catedraticos(
@@ -15,9 +13,9 @@ class Catedraticos(
     @ColumnInfo(name = "Facultad")
     var facultad: String = "",
     @ColumnInfo(name = "Telefono")
-    var telefono: String = "" ,
+    var telefono: String = "",
     @ColumnInfo(name= "Usuario")
-    var idCatedratico: String = "") {
+    var idCatedratico: String = ""){
     @PrimaryKey(autoGenerate = true)
     var id: Int = 0
     }
