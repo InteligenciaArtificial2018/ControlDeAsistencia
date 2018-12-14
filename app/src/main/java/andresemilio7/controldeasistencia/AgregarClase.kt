@@ -1,5 +1,6 @@
 package andresemilio7.controldeasistencia
 
+import andresemilio7.controldeasistencia.data.Catedraticos
 import andresemilio7.controldeasistencia.data.Clases
 import andresemilio7.controldeasistencia.data.ControlDeAsistenciaDatabase
 import android.os.Bundle
@@ -20,12 +21,12 @@ class AgregarClase: AppCompatActivity() {
         val seccion = intent.getStringExtra("Seccion")
         val hora = intent.getStringExtra("Hora")
         val aula = intent.getStringExtra("Aula")
-        val catedratico = intent.getIntExtra("CodigoCatedratico", 0)
+        val catedratico = intent.getStringExtra("CodigoCatedratico")
 
 
         if (asignatura == null  || asignatura == ""){
             btnAgregarClase.setOnClickListener {
-                val clases = Clases(etAsignatura.text.toString(), etSeccion.text.toString(), etHora.text.toString(), etAula.text.toString(), etCodigoCatedratico.text.toString().toInt())
+                val clases = Clases(etAsignatura.text.toString(), etSeccion.text.toString(), etHora.text.toString(), etAula.text.toString(), etCodigoCatedratico.text.toString())
                 controlAsistenciaDB?.getClasesDao()?.saveClases(clases)
                 Toast.makeText(this, "Guardado", Toast.LENGTH_SHORT).show()
                 finish()
@@ -37,9 +38,9 @@ class AgregarClase: AppCompatActivity() {
             etSeccion.setText(seccion)
             etHora.setText(hora)
             etAula.setText(aula)
-            etCodigoCatedratico.setText("Tacue")
+            etCodigoCatedratico.setText(catedratico)
             btnAgregarClase.setOnClickListener{
-                val clases = Clases(etAsignatura.text.toString(), etSeccion.text.toString(),  etHora.text.toString(), etAula.text.toString(), etCodigoCatedratico.text.toString().toInt())
+                val clases = Clases(etAsignatura.text.toString(), etSeccion.text.toString(),  etHora.text.toString(), etAula.text.toString(), etCodigoCatedratico.text.toString())
 
                 clases.idCodigo = codigoclase
                 controlAsistenciaDB?.getClasesDao()?.updateClases(clases)

@@ -4,6 +4,7 @@ import android.arch.persistence.room.*
 
 
 @Entity(tableName = "Clases"
+
 )
 class Clases(
     @ColumnInfo(name = "Asignatura")
@@ -15,7 +16,7 @@ class Clases(
     @ColumnInfo(name = "Aula")
     var aula: String = "",
     @ColumnInfo(name = "CodigoCatedratico")
-    var idCatedratico: Int = 0){
+    var idCatedratico: String = ""){
     @PrimaryKey(autoGenerate = true)
     var idCodigo: Int = 0}
 
