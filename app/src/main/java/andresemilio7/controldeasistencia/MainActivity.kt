@@ -1,15 +1,11 @@
 package andresemilio7.controldeasistencia
 
-import andresemilio7.controldeasistencia.CatedraticoAdapter.OnCatedraticoClickListener
-import andresemilio7.controldeasistencia.data.Catedraticos
-import andresemilio7.controldeasistencia.data.ControlDeAsistenciaDatabase
+
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v7.app.AlertDialog
-import android.support.v7.widget.LinearLayoutManager
 import android.widget.Button
-import kotlinx.android.synthetic.main.consultacatedratico.*
+
 
 class MainActivity : AppCompatActivity(){
 
@@ -49,6 +45,11 @@ class MainActivity : AppCompatActivity(){
         btnconclase.setOnClickListener {
             val intentConsultaClase = Intent(this,ConsultaClase::class.java)
             startActivity(intentConsultaClase)
+        }
+
+        btnconrev.setOnClickListener {
+            val intentConsultaRevision = Intent(this,ConsultaRevision::class.java)
+            startActivity(intentConsultaRevision)
         }
 
 
