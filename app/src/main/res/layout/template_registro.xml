@@ -6,16 +6,16 @@
               android:layout_height="wrap_content" android:clickable="true"
               android:background="?android:attr/selectableItemBackground">
 
-    <TextView
+    <EditText
             android:text="@string/asignatura"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:id="@+id/tvAsignatura"
+            android:layout_height="wrap_content" android:id="@+id/etAsignatura"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1" android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp" android:layout_marginTop="16dp" android:layout_marginBottom="8dp"/>
-    <TextView
+    <EditText
             android:text="@string/catedratico"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:id="@+id/tvCatedratico"
+            android:layout_height="wrap_content" android:id="@+id/etCatedratico"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1" android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp" android:layout_marginTop="16dp" android:layout_marginBottom="8dp"/>
     <LinearLayout
@@ -23,16 +23,16 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" android:layout_marginTop="8dp" android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp" android:layout_marginBottom="16dp">
-        <TextView
+        <EditText
                 android:text="@string/hora"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/tvHora" android:layout_weight="1"
+                android:layout_height="wrap_content" android:id="@+id/etHora" android:layout_weight="1"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textColor="@color/colorAccent" android:textSize="22sp"/>
-        <TextView
+        <EditText
                 android:text="@string/aula"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/tvAula" android:layout_weight="1"
+                android:layout_height="wrap_content" android:id="@+id/etAula" android:layout_weight="1"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textColor="@color/colorAccent" android:textSize="22sp"/>
         <EditText
@@ -43,19 +43,35 @@
                 android:textColor="@color/colorAccent" android:textSize="22sp"/>
     </LinearLayout>
 
+    <RadioGroup
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:layout_marginTop="8dp" android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp" android:layout_marginBottom="16dp"
+            android:id="@+id/rgRevision">
+        <RadioButton
+                android:text="@string/clase_realizada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/rbVerificado"/>
+        <RadioButton
+                android:text="@string/clase_no_realizado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/rbNoRealizado"/>
+
+    </RadioGroup>
     <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="match_parent" android:layout_marginTop="8dp" android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp" android:layout_marginBottom="16dp">
-        <CheckBox
-                android:text="@string/clase_realizada"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/cbVerificado"/>
-        <CheckBox
-                android:text="@string/clase_no_realizado"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/cbNoRealizado"/>
-
+        <Button
+                android:text="@string/agregar_revisi_n"
+                android:layout_width="336dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnAgregarRevision" android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp" style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:textSize="24sp"/>
     </LinearLayout>
 </LinearLayout>
