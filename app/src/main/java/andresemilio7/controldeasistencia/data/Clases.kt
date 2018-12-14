@@ -3,9 +3,9 @@ package andresemilio7.controldeasistencia.data
 import android.arch.persistence.room.*
 
 
-@Entity(tableName = "Clases",
+@Entity(tableName = "Clases"/*,
     foreignKeys = arrayOf(ForeignKey(entity = Catedraticos::class, parentColumns = arrayOf("id"), childColumns = arrayOf("CodigoCatedratico"))),
-    indices = arrayOf(Index(value =  ["Hora"], unique = true))
+    indices = arrayOf(Index(value =  ["Hora"], unique = true))*/
 
 )
 class Clases(
