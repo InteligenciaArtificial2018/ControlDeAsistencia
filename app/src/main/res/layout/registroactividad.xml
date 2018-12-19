@@ -28,7 +28,7 @@
             android:layout_marginRight="16dp" android:layout_marginBottom="16dp">
         <EditText
                 android:inputType="textPersonName"
-                android:layout_width="wrap_content"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content" android:id="@+id/etHora" android:layout_weight="1"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textColor="@color/colorAccent" android:textSize="22sp"
@@ -40,20 +40,36 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textColor="@color/colorAccent" android:textSize="22sp"
                 android:hint="@string/hintAula"/>
+
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:layout_marginTop="8dp" android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp" android:layout_marginBottom="16dp">
+
         <EditText
                 android:inputType="textPersonName"
-                android:layout_width="wrap_content"
+                android:layout_width="42dp"
                 android:layout_height="wrap_content" android:id="@+id/etFechaRev" android:layout_weight="1"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textColor="@color/colorAccent" android:textSize="22sp"
                 android:hint="@string/fecha"/>
-        <EditText
-                android:inputType="textPersonName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/etregistro" android:layout_weight="1"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:textColor="@color/colorAccent" android:textSize="22sp"
-                android:hint="@string/registro"/>
+
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:layout_marginTop="8dp" android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp" android:layout_marginBottom="16dp">
+
+    <EditText
+            android:inputType="textPersonName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/etregistro" android:layout_weight="1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/colorAccent" android:textSize="22sp"
+            android:hint="@string/registro"/>
     </LinearLayout>
 
 
