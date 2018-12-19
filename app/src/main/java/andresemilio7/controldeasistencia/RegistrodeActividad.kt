@@ -4,13 +4,12 @@ import andresemilio7.controldeasistencia.data.ControlDeAsistenciaDatabase
 import andresemilio7.controldeasistencia.data.RegistroActividad
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.widget.RadioGroup
 import android.widget.Toast
 import kotlinx.android.synthetic.main.registroactividad.*
 
 class RegistrodeActividad : AppCompatActivity() {
     private var controlAsistenciaDB: ControlDeAsistenciaDatabase? = null
-    private var revision = 0
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,14 +30,14 @@ class RegistrodeActividad : AppCompatActivity() {
         if (asignatura == null  || asignatura == ""){
             btnAgregarRevision.setOnClickListener {
                 val revision = RegistroActividad(etAsignatura.text.toString(), etCatedratico.text.toString(),
-                    etHora.text.toString(), etAula.text.toString(), etFechaRev.text.toString(), etregistro.toString())
+                    etHora.text.toString(), etAula.text.toString(), etFechaRev.text.toString(), etregistro.text.toString())
                 controlAsistenciaDB?.getRegistroActividadDAO()?.saveRegistroActividad(revision)
                 Toast.makeText(this, "Guardado", Toast.LENGTH_SHORT).show()
                 finish()
 
             }
         } else{
-            val id = intent.getIntExtra("id", 0)
+            intent.getIntExtra("id", 0)
             etAsignatura.setText(asignatura)
             etCatedratico.setText(catedratico)
             etHora.setText(hora)
@@ -46,7 +45,7 @@ class RegistrodeActividad : AppCompatActivity() {
             etFechaRev.setText(fecha)
             etregistro.setText(registro)
             btnAgregarRevision.setOnClickListener{
-                val revision = RegistroActividad(etAsignatura.text.toString(), etCatedratico.text.toString(), etHora.text.toString(), etAula.text.toString(), etFechaRev.text.toString(), etregistro.toString())
+                val revision = RegistroActividad(etAsignatura.text.toString(), etCatedratico.text.toString(), etHora.text.toString(), etAula.text.toString(), etFechaRev.text.toString(), etregistro.text.toString())
                 controlAsistenciaDB?.getRegistroActividadDAO()?.updateRegistroActividad(revision)
                 Toast.makeText(this, "No guardado", Toast.LENGTH_SHORT).show()
                 finish()

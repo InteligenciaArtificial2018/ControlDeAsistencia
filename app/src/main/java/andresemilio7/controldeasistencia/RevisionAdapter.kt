@@ -1,6 +1,5 @@
 package andresemilio7.controldeasistencia
 
-import andresemilio7.controldeasistencia.data.Clases
 import andresemilio7.controldeasistencia.data.RegistroActividad
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
