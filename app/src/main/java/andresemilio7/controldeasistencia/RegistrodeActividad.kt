@@ -20,12 +20,12 @@ class RegistrodeActividad : AppCompatActivity() {
         controlAsistenciaDB = ControlDeAsistenciaDatabase.getInstance(this)
 
 
-        val asignatura = intent.getStringExtra("idcodigo")
-        val catedratico = intent.getStringExtra("idCatedratico")
-        val hora = intent.getStringExtra("hora")
-        val aula = intent.getStringExtra("aula")
-        val fecha = intent.getStringExtra("fecha")
-        val registro = intent.getStringExtra("revision")
+        val asignatura = intent.getStringExtra("CodigoClase")
+        val catedratico = intent.getStringExtra("Catedratico")
+        val hora = intent.getStringExtra("Hora")
+        val aula = intent.getStringExtra("Aula")
+        val fecha = intent.getStringExtra("Fecha")
+        val registro = intent.getStringExtra("Revision")
 
 
         if (asignatura == null  || asignatura == ""){
