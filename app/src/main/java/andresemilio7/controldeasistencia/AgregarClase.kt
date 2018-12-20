@@ -27,6 +27,8 @@ class AgregarClase: AppCompatActivity() {
         if (asignatura == null  || asignatura == ""){
             btnAgregarClase.setOnClickListener {
                 val clases = Clases(etAsignatura.text.toString(), etSeccion.text.toString(), etHora.text.toString(), etAula.text.toString(), etCodigoCatedratico.text.toString())
+
+
                 controlAsistenciaDB?.getClasesDao()?.saveClases(clases)
                 Toast.makeText(this, "Guardado", Toast.LENGTH_SHORT).show()
                 finish()

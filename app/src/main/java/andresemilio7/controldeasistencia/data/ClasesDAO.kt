@@ -23,6 +23,8 @@ interface ClasesDAO{
     fun saveClases(clases: Clases)
 
 
+   /* @Query("SELECT Catedraticos.Usuario FROM Catedraticos INNER JOIN Clases ON CodigoCatedratico = Catedraticos.Usuario")
+    fun verificarCatedraticos()*/
     /**
      * Actualiza una tupla en la tabla Clases.
      * @param clases  el valor de la tupla a actualizar.
