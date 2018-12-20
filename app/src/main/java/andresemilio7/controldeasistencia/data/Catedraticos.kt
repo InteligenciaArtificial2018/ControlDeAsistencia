@@ -14,8 +14,17 @@ class Catedraticos(
     var facultad: String = "",
     @ColumnInfo(name = "Telefono")
     var telefono: String = "",
+    @PrimaryKey(autoGenerate = false)
     @ColumnInfo(name= "Usuario")
     var idCatedratico: String = ""){
-    @PrimaryKey(autoGenerate = true)
-    var id: Int = 0
+
+    @Ignore
+    constructor(nombre: String, apellido: String, correo: String, facultad: String, telefono: String, idCatedratico: String, id:Int): this(){
+        this.nombre = nombre
+        this.apellido = apellido
+        this.correo = correo
+        this.facultad = facultad
+        this.telefono = telefono
+        this.idCatedratico = idCatedratico
+    }
     }

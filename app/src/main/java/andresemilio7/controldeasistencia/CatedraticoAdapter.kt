@@ -37,7 +37,7 @@ class CatedraticoAdapter(var catedraticoList: List<Catedraticos>? = ArrayList<Ca
         fun onBindViews(position: Int) {
             vista.findViewById<TextView>(R.id.tvNombre).text = catedraticoList.get(position).nombre
             vista.findViewById<TextView>(R.id.tvPrimeraLetra).text = (catedraticoList.get(position).nombre.first().toUpperCase().toString())
-            vista.findViewById<TextView>(R.id.tvMostarId).text = catedraticoList.get(position).id.toString()
+            vista.findViewById<TextView>(R.id.tvMostarId).text = catedraticoList.get(position).idCatedratico.toString()
 
         }
     }
