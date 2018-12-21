@@ -15,14 +15,23 @@ import android.arch.persistence.room.*
 class Clases(
     @ColumnInfo(name = "Asignatura")
     var asignatura: String = "",
-    @ColumnInfo(name = "Seccion")
-    var seccion: String = "",
     @ColumnInfo(name = "Hora")
     var hora: String = "",
     @ColumnInfo(name = "Aula")
     var aula: String = "",
     @ColumnInfo(name = "CodigoCatedratico")
     var idCatedratico: String = ""){
-    @PrimaryKey(autoGenerate = true)
-    var idCodigo: Int = 0}
+    @PrimaryKey(autoGenerate = false)
+    @ColumnInfo(name = "Clase")
+    var idCodigo: String = ""
+
+    @Ignore
+    constructor(asignatura: String, hora: String, aula: String, idCatedratico: String, idCodigo: String): this(){
+        this.asignatura = asignatura
+        this.hora = hora
+        this.aula = aula
+        this.idCatedratico = idCatedratico
+        this.idCodigo = idCodigo
+    }
+}
 

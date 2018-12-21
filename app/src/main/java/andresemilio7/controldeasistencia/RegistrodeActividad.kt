@@ -19,17 +19,17 @@ class RegistrodeActividad : AppCompatActivity() {
         controlAsistenciaDB = ControlDeAsistenciaDatabase.getInstance(this)
 
 
-        val asignatura = intent.getStringExtra("CodigoClase")
-        val catedratico = intent.getStringExtra("Catedratico")
-        val hora = intent.getStringExtra("Hora")
-        val aula = intent.getStringExtra("Aula")
-        val fecha = intent.getStringExtra("Fecha")
-        val registro = intent.getStringExtra("Revision")
+        val asignatura = intent.getStringExtra("idcodigo")
+        val catedratico = intent.getStringExtra("idCatedratico")
+        val hora = intent.getStringExtra("hora")
+        val aula = intent.getStringExtra("aula")
+        val fecha = intent.getStringExtra("fecha")
+        val registro = intent.getStringExtra("revision")
 
 
         if (asignatura == null  || asignatura == ""){
             btnAgregarRevision.setOnClickListener {
-                val revision = RegistroActividad(etAsignatura.text.toString(), etCatedratico.text.toString(),
+                val revision = RegistroActividad(etCodigoClase.text.toString(), etCatedratico.text.toString(),
                     etHora.text.toString(), etAula.text.toString(), etFechaRev.text.toString(), etregistro.text.toString())
                 controlAsistenciaDB?.getRegistroActividadDAO()?.saveRegistroActividad(revision)
                 Toast.makeText(this, "Guardado", Toast.LENGTH_SHORT).show()
@@ -38,14 +38,14 @@ class RegistrodeActividad : AppCompatActivity() {
             }
         } else{
             intent.getIntExtra("id", 0)
-            etAsignatura.setText(asignatura)
+            etCodigoClase.setText(asignatura)
             etCatedratico.setText(catedratico)
             etHora.setText(hora)
             etAula.setText(aula)
             etFechaRev.setText(fecha)
             etregistro.setText(registro)
             btnAgregarRevision.setOnClickListener{
-                val revision = RegistroActividad(etAsignatura.text.toString(), etCatedratico.text.toString(), etHora.text.toString(), etAula.text.toString(), etFechaRev.text.toString(), etregistro.text.toString())
+                val revision = RegistroActividad(etCodigoClase.text.toString(), etCatedratico.text.toString(), etHora.text.toString(), etAula.text.toString(), etFechaRev.text.toString(), etregistro.text.toString())
                 controlAsistenciaDB?.getRegistroActividadDAO()?.updateRegistroActividad(revision)
                 Toast.makeText(this, "No guardado", Toast.LENGTH_SHORT).show()
                 finish()

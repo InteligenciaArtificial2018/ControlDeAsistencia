@@ -17,34 +17,32 @@ class AgregarClase: AppCompatActivity() {
 
         controlAsistenciaDB = ControlDeAsistenciaDatabase.getInstance(this)
 
-        val asignatura = intent.getStringExtra("Asignatura")
-        val seccion = intent.getStringExtra("Seccion")
-        val hora = intent.getStringExtra("Hora")
-        val aula = intent.getStringExtra("Aula")
-        val catedratico = intent.getStringExtra("CodigoCatedratico")
 
+        val asignatura = intent.getStringExtra("asignatura")
+        val hora = intent.getStringExtra("hora")
+        val aula = intent.getStringExtra("aula")
+        val catedratico = intent.getStringExtra("idCatedratico")
+        val id = intent.getStringExtra("idCodigo")
 
         if (asignatura == null  || asignatura == ""){
             btnAgregarClase.setOnClickListener {
-                val clases = Clases(etAsignatura.text.toString(), etSeccion.text.toString(), etHora.text.toString(), etAula.text.toString(), etCodigoCatedratico.text.toString())
+                val clases = Clases(etAsignatura.text.toString(), etHora.text.toString(), etAula.text.toString(), etCodigoCatedratico.text.toString(), etCodigoClase.text.toString())
 
-
-                controlAsistenciaDB?.getClasesDao()?.saveClases(clases)
-                Toast.makeText(this, "Guardado", Toast.LENGTH_SHORT).show()
-                finish()
+                        controlAsistenciaDB?.getClasesDao()?.saveClases(clases)
+                        Toast.makeText(this, "Guardado", Toast.LENGTH_SHORT).show()
+                        finish()
 
             }
         } else{
-            val codigoclase = intent.getIntExtra("idCodigo", 0)
+
             etAsignatura.setText(asignatura)
-            etSeccion.setText(seccion)
             etHora.setText(hora)
             etAula.setText(aula)
             etCodigoCatedratico.setText(catedratico)
+            etCodigoClase.setText(id)
             btnAgregarClase.setOnClickListener{
-                val clases = Clases(etAsignatura.text.toString(), etSeccion.text.toString(),  etHora.text.toString(), etAula.text.toString(), etCodigoCatedratico.text.toString())
+                val clases = Clases(etAsignatura.text.toString(),  etHora.text.toString(), etAula.text.toString(), etCodigoCatedratico.text.toString(), etCodigoClase.text.toString())
 
-                clases.idCodigo = codigoclase
                 controlAsistenciaDB?.getClasesDao()?.updateClases(clases)
                 Toast.makeText(this, "No guardado", Toast.LENGTH_SHORT).show()
                 finish()

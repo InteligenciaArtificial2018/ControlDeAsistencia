@@ -5,10 +5,23 @@ import android.arch.persistence.room.*
 
 
 
-@Entity(tableName = "RegistroActividad")
+@Entity(tableName = "RegistroActividad",
+        foreignKeys = arrayOf(
+        ForeignKey(
+            entity = Catedraticos::class,
+            parentColumns = arrayOf("Usuario"),
+            childColumns = arrayOf("Catedratico")
+        ),
+        ForeignKey(
+            entity = Clases::class,
+            parentColumns = arrayOf("Clase"),
+            childColumns = arrayOf("CodigoClase")
+        )
+        ))
 
 
-class RegistroActividad(@ColumnInfo(name = "CodigoClase")
+class RegistroActividad(
+@ColumnInfo(name = "CodigoClase")
 var idcodigo: String = "",
 @ColumnInfo(name = "Catedratico")
 var idCatedratico: String = "",
