@@ -41,12 +41,12 @@ import kotlinx.android.synthetic.main.consultaregistro.*
      */
     override fun onRevisionItemClickListener(revisionActividad: RegistroActividad) {
         val intent = Intent(this, RegistrodeActividad::class.java)
-        intent.putExtra("CodigoClase", revisionActividad.idcodigo)
-        intent.putExtra("Catedratico", revisionActividad.idCatedratico)
-        intent.putExtra("Hora", revisionActividad.hora)
-        intent.putExtra("Aula", revisionActividad.aula)
-        intent.putExtra("Fecha", revisionActividad.fecha)
-        intent.putExtra("Revision", revisionActividad.revision)
+        intent.putExtra("idcodigo", revisionActividad.idcodigo)
+        intent.putExtra("idCatedratico", revisionActividad.idCatedratico)
+        intent.putExtra("hora", revisionActividad.hora)
+        intent.putExtra("aula", revisionActividad.aula)
+        intent.putExtra("fecha", revisionActividad.fecha)
+        intent.putExtra("revision", revisionActividad.revision)
         startActivity(intent)
     }
 
@@ -60,12 +60,12 @@ import kotlinx.android.synthetic.main.consultaregistro.*
         builder.setPositiveButton(R.string.asignatura) {dialog, wich ->
             // Realizar el llamado a la activity de agregar enviando los valores mediante el intent
             val intent = Intent(this, RegistrodeActividad::class.java)
-            intent.putExtra("CodigoClase", revisionActividad.idcodigo)
-            intent.putExtra("Catedratico", revisionActividad.idCatedratico)
-            intent.putExtra("Hora", revisionActividad.hora)
-            intent.putExtra("Aula", revisionActividad.aula)
-            intent.putExtra("Fecha", revisionActividad.fecha)
-            intent.putExtra("Revision", revisionActividad.revision)
+            intent.putExtra("idcodigo", revisionActividad.idcodigo)
+            intent.putExtra("idCatedratico", revisionActividad.idCatedratico)
+            intent.putExtra("hora", revisionActividad.hora)
+            intent.putExtra("aula", revisionActividad.aula)
+            intent.putExtra("fecha", revisionActividad.fecha)
+            intent.putExtra("revision", revisionActividad.revision)
 
             startActivity(intent)
         }
