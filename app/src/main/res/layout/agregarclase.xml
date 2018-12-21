@@ -13,26 +13,28 @@
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/etAsignatura" android:layout_marginTop="16dp"
-           android:layout_marginStart="8dp"
+            android:id="@+id/etCodigoClase" android:layout_marginTop="16dp"
+            android:layout_marginStart="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toEndOf="parent" android:hint="@string/hintAsignatura"/>
+            app:layout_constraintEnd_toEndOf="parent" android:hint="@string/hintCodigoClase"/>
     <EditText
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/etSeccion" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/etAsignatura" android:layout_marginStart="8dp"
+            android:id="@+id/etAsignatura" android:layout_marginTop="16dp"
+           android:layout_marginStart="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/etCodigoClase"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toEndOf="parent" android:hint="@string/hintSeccion"/>
+            app:layout_constraintEnd_toEndOf="parent" android:hint="@string/hintAsignatura"/>
+
     <EditText
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/etHora" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/etSeccion" android:layout_marginStart="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/etAsignatura" android:layout_marginStart="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toEndOf="parent" android:hint="@string/hintHora"/>
     <EditText
@@ -54,17 +56,6 @@
             app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toEndOf="parent" android:hint="@string/hintCodigoCatedratico"
             app:layout_constraintHorizontal_bias="0.0"/>
-
-    <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:ems="10"
-            android:id="@+id/tvIdCatedraticoo" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/etCodigoCatedratico" android:layout_marginStart="8dp"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toEndOf="parent" android:hint="@string/hintCatedraticoAsignado"
-            android:textSize="24sp"/>
 
 
     <Button
